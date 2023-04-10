@@ -14,6 +14,6 @@ The following table provides a summary of the different programs available in th
 | `cuda_prime_number_calculator.py`         | Sieve of Eratosthenes   | PyCUDA         | -               |
 | `multiprocessing_prime_number_finder.py`  | Sieve of Eratosthenes   | -              | Yes             |
 | `trial_division_prime_number_finder.py`   | Trial Division         | -              | -               |
-| `cuda_trial_division_prime_number_finder.py` | Trial Division | -              | Yes             |
+| `cuda_trial_division_prime_number_finder.py` | Trial Division | PyCUDA          | -               |
 | `multiprocessing_trial_division_prime_number_finder.py` | Trial Division | -              | Yes             |
 
