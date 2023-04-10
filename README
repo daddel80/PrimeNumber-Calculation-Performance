@@ -1,7 +1,0 @@
-| Program Name                              | Algorithm              | Graphics Card | Multiprocessing |
-| ----------------------------------------- | ---------------------- | ------------- | :---:  |
-| `cuda_prime_number_calculator.py`         | Sieve of Eratosthenes   | PyCUDA        | -               |
-| `numpy_prime_number_finder.py`            | Sieve of Eratosthenes   | -             | -               |
-| `multiprocessing_prime_number_finder.py`  | Sieve of Eratosthenes   | -             | Yes             |
-| `trial_division_prime_number_finder.py`   | Trial Division         | -             | -               |
-| `multiprocessing_trial_division_prime_number_finder.py` | Trial Division | -             | Yes             |
