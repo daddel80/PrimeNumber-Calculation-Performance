@@ -26,11 +26,27 @@ def count_primes(n):
     return num_primes, np.max(np.nonzero(is_prime)[0])
 
 if __name__ == "__main__":
-    begin = time.perf_counter()  # Starting time measurement
-    n = 10000000000  # Determining the upper limit n for the search for prime numbers
-    num_primes, last_prime = count_primes(n)  # Calling the function to determine prime numbers
-    print(f"There are {num_primes} prime numbers less than or equal to {n}.")  # Output of the number of prime numbers
-    print(f"The last prime number is {last_prime}.")  # Output of the largest prime factor of n
-    end = time.perf_counter()  # Ending time measurement
-    duration = (end - begin) * 1000  # Calculating the duration of the time measurement in milliseconds
-    print(f"Duration: {duration} ms")  # Output of the duration of the time measurement
+    begin_real = time.perf_counter()
+    begin_cpu = time.process_time()
+    
+    n = 100000000
+    num_primes, last_prime = count_primes(n)
+    
+    end_real = time.perf_counter()
+    end_cpu = time.process_time()
+
+    duration_real = (end_real - begin_real) * 1000
+    duration_cpu = (end_cpu - begin_cpu) * 1000
+
+    print(f"There are {num_primes} prime numbers less than or equal to {n}.")
+    print(f"The last prime number is {last_prime}.")
+
+    def format_duration(duration):
+        hours = int(duration // (3600 * 1000))
+        minutes = int((duration % (3600 * 1000)) // (60 * 1000))
+        seconds = int((duration % (60 * 1000)) // 1000)
+        milliseconds = int(duration % 1000)
+        return f"{hours:02}:{minutes:02}:{seconds:02}.{milliseconds:03}"
+
+    print(f"Duration (Real Time): {duration_real:.2f} ms ({format_duration(duration_real)})")
+    print(f"Duration (System Time): {duration_cpu:.2f} ms ({format_duration(duration_cpu)})")
