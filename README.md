@@ -100,14 +100,14 @@ To execute these programs, ensure the following components are installed:
 
 ## **Performance Results**
 
-| **Script**                                | **Real Time**  | **System Time**  | **Additional Info**                   |
+| **Script**                                | **Real Time (min)**  | **System Time (min)**  | **Additional Info**                   |
 |-------------------------------------------|----------------|------------------|----------------------------------------|
-| `sieve_eratosthenes.py`                   | 00:07:45.452   | 00:07:34.343     | -                                      |
-| `sieve_eratosthenes_multiprocessing.py`   | 00:08:51.862   | 00:07:41.687     | processors used: 16                   |
-| `sieve_eratosthenes_cuda.py`              | 00:01:40.675   | 00:01:41.687     | block_size: 256, grid_size: 195313     |
-| `trial_division.py`                       | 00:15:49.027   | 00:15:33.953     | -                                      |
-| `trial_division_multiprocessing.py`       | 00:02:55.457   | 00:02:45.500     | processors used: 16                   |
-| `trial_division_cuda.py`                  | 00:01:15.236   | 00:01:25.250     | block_size: 256, grid_size: 195313     |
+| `sieve_eratosthenes.py`                   | 07:45.452   | 07:34.343     | -                                      |
+| `sieve_eratosthenes_multiprocessing.py`   | 08:51.862   | 07:41.687     | processors used: 16                   |
+| `sieve_eratosthenes_cuda.py`              | 01:40.675   | 01:41.687     | block_size: 256, grid_size: 195313     |
+| `trial_division.py`                       | 15:49.027   | 15:33.953     | -                                      |
+| `trial_division_multiprocessing.py`       | 02:55.457   | 02:45.500     | processors used: 16                   |
+| `trial_division_cuda.py`                  | 01:15.236   | 01:25.250     | block_size: 256, grid_size: 195313     |
 
 > **Note:** In some cases, the **System Time** exceeds the **Real Time** due to asynchronous GPU computations and CPU overheads. The **System Time** includes time spent by the CPU managing GPU tasks and may not represent the exact duration of GPU computations.
 
